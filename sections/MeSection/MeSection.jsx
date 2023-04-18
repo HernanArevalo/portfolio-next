@@ -39,7 +39,7 @@ export const MeSection = ( { info } ) => {
                 
               </div>
               <div className="me2-grid2-container">
-                <Image src="/profile.jpg " alt="profile-picture" width='100'height={'100'}/>
+                <Image src="/profile.jpg " alt="profile-picture" width='280'height='280'/>
               </div>
             </div>
 
@@ -125,6 +125,7 @@ export const MeSection = ( { info } ) => {
             display: flex;
             flex-direction: column;
             gap: 10px;
+            width: calc(100% - 340px);
         }
         .me2-grid1-container span{
             font-weight: 600;
@@ -141,15 +142,13 @@ export const MeSection = ( { info } ) => {
 
         .me2-grid2-container{
             width: 280px;
-            display: flex;
-            align-items: end;
-            justify-content: end;
-        }
-        .me2-grid2-container > img{
             height: 280px;
-            width: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-radius: 50%;
             border: 6px solid rgb(238, 117, 74);
+            overflow: hidden;
         }
 
         @media (max-width: 1500px) {

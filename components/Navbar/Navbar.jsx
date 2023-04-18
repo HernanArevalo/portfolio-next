@@ -122,9 +122,9 @@ export const Navbar = () => {
 .navbar-item a span{
     margin: auto;
     font-family: 'Source Serif Pro', serif;
-    font-weight: 600;
+    font-weight: 700;
     color: rgb(42, 93, 131);
-    font-size: 20px;
+    font-size: 23px;
 }
 .navbar-icon{
     height: 100%;
