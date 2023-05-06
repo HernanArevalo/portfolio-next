@@ -8,14 +8,14 @@
 			"studies2":"B1 English level (FL - UNC).",
 			"studies3":"Website project developer.",
 			"location":"Córdoba, Argentina",
-			"description1":"Frontend knowledge of React, Redux, Nextjs, html and css.",
+			"description1":"Frontend knowledge of React, Redux and NextJS.",
 			"description2":"Strong understanding of design principles, Modular CSS, and responsive design.",
 			"description3":"I enjoy working in team-based environments and am constantly seeking ways to improve my skills and offer innovative solutions to technical challenges.",
 			"description4":"Passionate learner of new technologies and tools with fast learning capability",
 			"description5":"Positive attitude, strong work ethic and out-of-the-box thinking."
 		},
 		"projects":{
-			"title":"Projects",
+			"title":["P","r","o","j","e","c","t","s"],
 			"respository":"GitHub repository"
 		},
 		"skills":{
@@ -49,7 +49,7 @@
 			
 		},
 		"projects":{
-			"title":"Projectos",
+			"title":["P","r","o","y","e","c","t","o","s"],
 			"respository":"Repositorio GitHub"
 		},
 		"skills":{

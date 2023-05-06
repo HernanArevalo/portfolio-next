@@ -11,11 +11,16 @@ export const Likes = () => {
     const { likesCounter } = useSelector( state => state.likes );
     const { isSaving } = useSelector( state => state.likes );
 
-    if ( localStorage.getItem("liked") == null){
-         localStorage.setItem("liked", "false")
-    }
+    useEffect(() => {
+        if ( localStorage.getItem("liked") == null){
+             localStorage.setItem("liked", "false")
+        }
 
-    const [liked, setLiked] = useState( localStorage.getItem("liked") )    
+    }, [])
+    
+
+
+    const [liked, setLiked] = useState( false )    
     const [likes, setLikes] = useState( likesCounter )
 
 
@@ -26,6 +31,8 @@ export const Likes = () => {
 
     const onLikeClicked = (e) => {
         e.preventDefault()
+
+        console.log('clicked!')
 
         if ( localStorage.getItem("liked") == "true" ) {
             dispatch( startRemovingLike() )
@@ -45,27 +52,27 @@ export const Likes = () => {
              disabled={ isSaving }
              opacity={ "0.5" }
              >
-            { liked == "true"?
-            <box-icon type="solid"
-            name='heart'
-            className="likes-heart"
-            color="rgb(238, 117, 74)">
-            </box-icon>
-            :
-            <box-icon type="regular"
-            name='heart'
-            className="likes-heart"
-            color="rgb(238, 117, 74)">
-            </box-icon>
-    
-    
-            }
+                { liked == "true"?
+                        <box-icon type="solid"
+                        name='heart'
+                        className="likes-heart"
+                        color="rgb(238, 117, 74)">
+                        </box-icon>
+                    :
+                        <box-icon type="regular"
+                        name='heart'
+                        className="likes-heart"
+                        color="rgb(238, 117, 74)">
+                        </box-icon>
+                }
+
             <div className="likes-counter">{ likes }</div>
         </button>
 
     <style jsx>{`
 
         .likes-container{
+            cursor: pointer;
             position: absolute;
             height: 45px;
             padding: 0 10px;
@@ -86,6 +93,7 @@ export const Likes = () => {
             -moz-user-select: none; /* Old versions of Firefox */
             -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none;
+            z-index: 999;
         }
 
         .display-none{
@@ -107,6 +115,7 @@ export const Likes = () => {
         .likes-counter{
             margin-left: 5px;
             font-size: 18px;
+            font-weight: 700;
         }
 
         @media (max-width: 500px) {

@@ -41,6 +41,12 @@ body{
   color: rgb(246, 218, 85);
   margin: 0;
   height: 260px;
+  cursor: default;
+}
+
+.section-title-word:hover{
+  color: #ee754a;
+  transition: .3s;
 }
 
 .medidas-fix{
